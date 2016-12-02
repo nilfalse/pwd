@@ -1,0 +1,35 @@
+body {
+    max-width: 720px;
+    margin: 24px auto 0;
+}
+
+.app__header {
+    font-family: Arial,Helvetica,sans-serif;
+}
+.app__header h1 {
+    margin: 0;
+    padding: 0 8px 0;
+}
+.app__settings {
+    padding: 8px;
+}
+.app__controls {
+    padding: 8px;
+}
+.app__passwords-count {
+    font-family: Arial,Helvetica,sans-serif;
+}
+.app__passwords-count .input__control.app__passwords-count-control {
+    width: 48px;
+}
+.app__list {
+    padding: 8px;
+}
+
+.password-range {}
+.password-range__label {
+    cursor: pointer;
+}
+.password-range__symbols {
+    color: #777;
+}

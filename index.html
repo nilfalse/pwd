@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Password generator &mdash; nilfalse.com</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="PWD" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="bem-components/desktop/bem-components.css">
+
+<div class="app__header">
+    <h1>Password generator</h1>
+</div><div class="app__settings">
+<table>
+<tr class="password-range checkbox checkbox_theme_islands checkbox_size_m i-bem checkbox_checked" data-bem="{&quot;checkbox&quot;:{}}">
+    <td class="checkbox__box">
+        <input id="chars_num" type="checkbox" value="0123456789" checked="checked" autocomplete="off" class="password-range__input checkbox__control" />
+    </td><td>
+        <label for="chars_num" role="presentation" class="password-range__label checkbox__text">Numbers</label>
+    </td><td>
+        <label for="chars_num" role="presentation" class="password-range__label checkbox__text"><small class="password-range__symbols">0123456789</small></label>
+    </td>
+</tr>
+<tr class="password-range checkbox checkbox_theme_islands checkbox_size_m i-bem checkbox_checked" data-bem="{&quot;checkbox&quot;:{}}">
+    <td class="checkbox__box">
+        <input id="chars_latin_upper" type="checkbox" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" checked="checked" autocomplete="off" class="password-range__input checkbox__control" />
+    </td><td>
+        <label for="chars_latin_upper" role="presentation" class="password-range__label checkbox__text">Latin Uppercase</label>
+    </td><td>
+        <label for="chars_latin_upper" role="presentation" class="password-range__label checkbox__text"><small class="password-range__symbols">ABCDEFGHIJKLMNOPQRSTUVWXYZ</small></label>
+    </td>
+</tr>
+<tr class="password-range checkbox checkbox_theme_islands checkbox_size_m i-bem checkbox_checked" data-bem="{&quot;checkbox&quot;:{}}">
+    <td class="checkbox__box">
+        <input id="chars_latin_lower" type="checkbox" value="abcdefghijklmnopqrstuvwxyz" checked="checked" autocomplete="off" class="password-range__input checkbox__control" />
+    </td><td>
+        <label for="chars_latin_lower" role="presentation" class="password-range__label checkbox__text">Latin Lowercase</label>
+    </td><td>
+        <label for="chars_latin_lower" role="presentation" class="password-range__label checkbox__text"><small class="password-range__symbols">abcdefghijklmnopqrstuvwxyz</small></label>
+    </td>
+</tr>
+<tr class="password-range checkbox checkbox_theme_islands checkbox_size_m i-bem checkbox_checked" data-bem="{&quot;checkbox&quot;:{}}">
+    <td class="checkbox__box">
+        <input id="chars_spec" type="checkbox" value="! &quot;№;%:?*()_+=-~/\\<>,.[]{}" checked="checked" autocomplete="off" class="password-range__input checkbox__control" />
+    </td><td>
+        <label for="chars_spec" role="presentation" class="password-range__label checkbox__text">Special Symbols</label>
+    </td><td>
+        <label for="chars_spec" role="presentation" class="password-range__label checkbox__text"><small class="password-range__symbols">! &quot;№;%:?*()_+=-~/\\&gt;&lt;,.[]{}</small></label>
+    </td>
+</tr>
+</table>
+</div><div class="app__controls">
+<div class="app__passwords-count">
+    <label for="count">How many passwords would you like?</label>
+    <span class="input input_theme_islands input_size_m i-bem input_js_inited" data-bem="{&quot;input&quot;:{}}">
+        <span class="input__box">
+            <input id="count" type="number" value="20" min="1" max="25" placeholder="How many?" class="app__passwords-count-control input__control" />
+        </span>
+    </span>
+</div>
+<button class="button button_theme_islands button_size_m button_type_submit button__control i-bem" role="button" type="submit" data-bem="{&quot;button&quot;:{}}">
+    <span class="app__clear-button button__text">Refresh list</span>
+</button>
+<button class="button button_theme_islands button_size_m button_type_submit button_view_action button__control i-bem" role="button" type="submit" data-bem="{&quot;button&quot;:{}}">
+    <span class="app__more-button button__text">More passwords</span>
+</button>
+</div><div class="app__list">
+</div>
+
+<script src="bem-components/desktop/bem-components.js"></script>
+<script>
+if (!Element.prototype.matches) {
+    Element.prototype.matches = 
+        Element.prototype.matchesSelector || 
+        Element.prototype.mozMatchesSelector ||
+        Element.prototype.msMatchesSelector || 
+        Element.prototype.oMatchesSelector || 
+        Element.prototype.webkitMatchesSelector ||
+        function(s) {
+            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                i = matches.length;
+            while (--i >= 0 && matches.item(i) !== this) {}
+            return i > -1;            
+        };
+}
+</script>
+<script src="main.js"></script>
+
+
+<img src="https://mc.yandex.ru/watch/34871405?ut=noindex" style="position:absolute; left:-9999px;" alt="" />

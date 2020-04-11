@@ -1,6 +1,6 @@
 # Simple online password generator
 
-https://nilfalse.com/pwd/
+https://nilfalse.com/labs/pwd/
 
 Passwords are generated on the client side.
 
